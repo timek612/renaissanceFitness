@@ -1,0 +1,32 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-renaissancefitness-dev-211202-authRole",
+      "UnauthRoleArn": "arn:aws:iam::471112597286:role/amplify-renaissancefitness-dev-211202-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::471112597286:role/amplify-renaissancefitness-dev-211202-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-renaissancefitness-dev-211202-deployment",
+      "UnauthRoleName": "amplify-renaissancefitness-dev-211202-unauthRole",
+      "StackName": "amplify-renaissancefitness-dev-211202",
+      "StackId": "arn:aws:cloudformation:us-east-1:471112597286:stack/amplify-renaissancefitness-dev-211202/5da578f0-1b5d-11f1-9bc9-12b507e65f9f",
+      "AmplifyAppId": "dh07tjtjqryyo"
+    },
+    "categories": {
+      "function": {
+        "renaissancefitness357d35eb": {
+          "deploymentBucketName": "amplify-renaissancefitness-dev-211202-deployment",
+          "s3Key": "amplify-builds/renaissancefitness357d35eb-39682b2b784d565a5143-build.zip"
+        }
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "dh07tjtjqryyo",
+          "type": "manual"
+        }
+      },
+      "api": {
+        "api": {}
+      }
+    }
+  }
+}

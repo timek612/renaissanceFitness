@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/survey": {
+      "name": "/survey",
+      "lambdaFunction": "renaissancefitness357d35eb",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
