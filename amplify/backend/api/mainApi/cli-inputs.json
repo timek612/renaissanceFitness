@@ -3,7 +3,7 @@
   "paths": {
     "/survey": {
       "name": "/survey",
-      "lambdaFunction": "renaissancefitness357d35eb",
+      "lambdaFunction": "renaissanceFitnessEmailer",
       "permissions": {
         "setting": "open"
       }

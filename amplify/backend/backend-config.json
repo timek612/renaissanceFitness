@@ -1,19 +1,19 @@
 {
   "function": {
-    "renaissancefitness357d35eb": {
+    "renaissanceFitnessEmailer": {
       "build": true,
       "providerPlugin": "awscloudformation",
       "service": "Lambda"
     }
   },
   "api": {
-    "api": {
+    "mainApi": {
       "service": "API Gateway",
       "providerPlugin": "awscloudformation",
       "dependsOn": [
         {
           "category": "function",
-          "resourceName": "renaissancefitness357d35eb",
+          "resourceName": "renaissanceFitnessEmailer",
           "attributes": [
             "Name",
             "Arn"
@@ -25,8 +25,8 @@
   "hosting": {
     "amplifyhosting": {
       "service": "amplifyhosting",
-      "providerPlugin": "awscloudformation",
-      "type": "manual"
+      "type": "cicd",
+      "lastPushTimeStamp": "2026-03-11T22:26:49.025Z"
     }
   }
 }

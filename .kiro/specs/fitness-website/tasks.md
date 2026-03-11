@@ -144,14 +144,14 @@ This implementation plan breaks down the development of a personal fitness websi
     - Test email sending from Lambda
     - _Requirements: 3.2, 3.3_
 
-- [x] 10. Integrate frontend with AWS backend
-  - [x] 10.1 Implement sendSurveyEmail API call
+- [ ] 10. Integrate frontend with AWS backend
+  - [ ] 10.1 Implement sendSurveyEmail API call
     - Create API utility function to call Amplify endpoint
     - Add error handling for network failures
     - Add loading state during submission
     - _Requirements: 2.5, 3.3_
 
-  - [x] 10.2 Connect SurveyModal to API
+  - [] 10.2 Connect SurveyModal to API
     - Call sendSurveyEmail on form submission
     - Handle success and error responses
     - Display error message on failure
@@ -169,8 +169,8 @@ This implementation plan breaks down the development of a personal fitness websi
     - Test loading states during submission
     - _Requirements: 2.5, 2.7_
 
-- [x] 11. Create main App component and integrate all sections
-  - [x] 11.1 Implement App component
+- [] 11. Create main App component and integrate all sections
+  - [] 11.1 Implement App component
     - Create App.jsx with survey modal state management
     - Import and render Header, AboutSection, PersonalTrainingSection
     - Add Footer component (simple black background with white text)
@@ -185,8 +185,8 @@ This implementation plan breaks down the development of a personal fitness websi
     - Test modal closes correctly
     - _Requirements: 1.1, 1.2, 1.3, 2.1_
 
-- [x] 12. Implement responsive design
-  - [x] 12.1 Add responsive breakpoints
+- [] 12. Implement responsive design
+  - [] 12.1 Add responsive breakpoints
     - Configure Tailwind breakpoints for mobile, tablet, desktop
     - Test layouts at different screen sizes
     - Adjust grid layouts for mobile (single column)
@@ -198,13 +198,13 @@ This implementation plan breaks down the development of a personal fitness websi
     - Test modal scrollability on small screens
     - _Requirements: 4.1, 4.2, 4.3_
 
-- [x] 13. Deploy to AWS Amplify
-  - [x] 13.1 Configure Amplify hosting
+- [] 13. Deploy to AWS Amplify
+  - [] 13.1 Configure Amplify hosting
     - Run `amplify add hosting` to set up hosting
     - Configure build settings for React app
     - _Requirements: 3.1, 3.4_
 
-  - [ ] 13.2 Deploy application
+  - [x] 13.2 Deploy application
     - Run `amplify push` to deploy backend resources
     - Run `amplify publish` to deploy frontend
     - Verify deployment and test live site

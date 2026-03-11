@@ -1,6 +1,6 @@
 export type AmplifyDependentResourcesAttributes = {
     "function": {
-        "renaissancefitness357d35eb": {
+        "renaissanceFitnessEmailer": {
             "Name": "string",
             "Arn": "string",
             "Region": "string",
@@ -8,7 +8,7 @@ export type AmplifyDependentResourcesAttributes = {
         }
     },
     "api": {
-        "api": {
+        "mainApi": {
             "RootUrl": "string",
             "ApiName": "string",
             "ApiId": "string"

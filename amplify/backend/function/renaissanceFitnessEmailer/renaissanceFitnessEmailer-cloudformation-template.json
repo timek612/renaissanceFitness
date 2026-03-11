@@ -15,6 +15,9 @@
     },
     "s3Key": {
       "Type": "String"
+    },
+    "businessEmail": {
+      "Type": "String"
     }
   },
   "Conditions": {
@@ -47,12 +50,12 @@
         "FunctionName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "renaissancefitness357d35eb",
+            "renaissanceFitnessEmailer",
             {
               "Fn::Join": [
                 "",
                 [
-                  "renaissancefitness357d35eb",
+                  "renaissanceFitnessEmailer",
                   "-",
                   {
                     "Ref": "env"
@@ -70,7 +73,9 @@
             "REGION": {
               "Ref": "AWS::Region"
             },
-            "BUSINESS_EMAIL": "aj.timek@gmail.com"
+            "BUSINESS_EMAIL": {
+              "Ref": "businessEmail"
+            }
           }
         },
         "Role": {
@@ -79,7 +84,7 @@
             "Arn"
           ]
         },
-        "Runtime": "nodejs20.x",
+        "Runtime": "nodejs22.x",
         "Layers": [],
         "Timeout": 25
       }
@@ -90,12 +95,12 @@
         "RoleName": {
           "Fn::If": [
             "ShouldNotCreateEnvResources",
-            "renaissancefitnessLambdaRolef9cc7777",
+            "renaissancefitnessLambdaRole501e5dd9",
             {
               "Fn::Join": [
                 "",
                 [
-                  "renaissancefitnessLambdaRolef9cc7777",
+                  "renaissancefitnessLambdaRole501e5dd9",
                   "-",
                   {
                     "Ref": "env"
@@ -161,18 +166,37 @@
                   }
                 ]
               }
-            },
-            {
-              "Effect": "Allow",
-              "Action": [
-                "ses:SendEmail",
-                "ses:SendRawEmail"
-              ],
-              "Resource": "*"
             }
           ]
         }
       }
+    },
+    "CustomLambdaExecutionPolicy": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyName": "custom-lambda-execution-policy",
+        "PolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Action": [
+                "ses:SendEmail",
+                "ses:SendRawEmail"
+              ],
+              "Resource": [
+                "*"
+              ],
+              "Effect": "Allow"
+            }
+          ]
+        },
+        "Roles": [
+          {
+            "Ref": "LambdaExecutionRole"
+          }
+        ]
+      },
+      "DependsOn": "LambdaExecutionRole"
     }
   },
   "Outputs": {
