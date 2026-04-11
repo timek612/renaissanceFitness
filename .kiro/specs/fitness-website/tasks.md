@@ -144,8 +144,8 @@ This implementation plan breaks down the development of a personal fitness websi
     - Test email sending from Lambda
     - _Requirements: 3.2, 3.3_
 
-- [ ] 10. Integrate frontend with AWS backend
-  - [ ] 10.1 Implement sendSurveyEmail API call
+- [x] 10. Integrate frontend with AWS backend
+  - [x] 10.1 Implement sendSurveyEmail API call
     - Create API utility function to call Amplify endpoint
     - Add error handling for network failures
     - Add loading state during submission
@@ -193,7 +193,7 @@ This implementation plan breaks down the development of a personal fitness websi
     - Ensure modal is responsive and scrollable on mobile
     - _Requirements: 4.1, 4.2, 4.3, 4.4_
 
-  - [ ]* 12.2 Write unit tests for responsive behavior
+  - [ ] 12.2 Write unit tests for responsive behavior
     - Test component rendering at different viewport sizes
     - Test modal scrollability on small screens
     - _Requirements: 4.1, 4.2, 4.3_

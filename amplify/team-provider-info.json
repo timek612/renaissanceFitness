@@ -15,7 +15,7 @@
       "function": {
         "renaissanceFitnessEmailer": {
           "deploymentBucketName": "amplify-renaissancefitness-dev-170410-deployment",
-          "s3Key": "amplify-builds/renaissanceFitnessEmailer-51492b2b794132514a70-build.zip",
+          "s3Key": "amplify-builds/renaissanceFitnessEmailer-43742f6744445867464f-build.zip",
           "businessEmail": "aj.timek@gmail.com"
         }
       },
