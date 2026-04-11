@@ -16,23 +16,7 @@ function AboutSection() {
                     <div>
                         <h3 className="text-xl sm:text-2xl font-bold text-black mb-2 sm:mb-3">Bio</h3>
                         <p className="text-gray-800 leading-relaxed text-sm sm:text-base">
-                            [Bio content goes here]
-                        </p>
-                    </div>
-
-                    <div>
-                        <h3 className="text-xl sm:text-2xl font-bold text-black mb-2 sm:mb-3">Credentials</h3>
-                        <ul className="text-gray-800 space-y-2 text-sm sm:text-base">
-                            <li>[Credential 1]</li>
-                            <li>[Credential 2]</li>
-                            <li>[Credential 3]</li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h3 className="text-xl sm:text-2xl font-bold text-black mb-2 sm:mb-3">Fitness Philosophy</h3>
-                        <p className="text-gray-800 leading-relaxed text-sm sm:text-base">
-                            [Fitness philosophy content goes here]
+                            My name is John Christopherson. I’m an NCSF Certified Personal Trainer and the founder of Renaissance Personal Fitness. I decided to pursue a career as a personal trainer because I want to help people live their best life, and I believe that exercise is an essential part of that. I know that the gym can be an intimidating place for many, so I make it my mission to ensure that training with me is accessible, comfortable, and rewarding for everyone, regardless of fitness level, age, or identity. My goal is to empower you to achieve your fitness goals by providing individualized programming, encouragement, and accountability. Whether you want to get stronger, improve your mobility, build muscle, overcome pain, or simply feel more confident in the gym, I can help you get there.
                         </p>
                     </div>
                 </div>

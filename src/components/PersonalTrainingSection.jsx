@@ -8,47 +8,50 @@ function PersonalTrainingSection({ onBookNowClick }) {
                     <div className="bg-gray-900 p-4 sm:p-6 rounded-lg">
                         <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Screening & Assessment Process</h3>
                         <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
-                            [Screening and assessment process description]
-                        </p>
-                    </div>
-
-                    <div className="bg-gray-900 p-4 sm:p-6 rounded-lg">
-                        <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Exercise Programming Approach</h3>
-                        <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
-                            [Exercise programming approach description]
-                        </p>
-                    </div>
-
-                    <div className="bg-gray-900 p-4 sm:p-6 rounded-lg">
-                        <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Benefits</h3>
-                        <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
-                            [Benefits description]
-                        </p>
+                            At Renaissance Personal Fitness, your personal goals are always top priority. That’s why your Renaissance journey begins with a free assessment, consisting of an intake interview and a movement assessment. This first step is critical because it gives me the information I need to build an individually tailored program that specifically targets your goals. Your program will take into account your personal strengths, limitations, interests, experience, and body mechanics so that it fits you like a glove.                         </p>
                     </div>
 
                     <div className="bg-gray-900 p-4 sm:p-6 rounded-lg">
                         <h3 className="text-xl sm:text-2xl font-bold mb-3 sm:mb-4">Falcon</h3>
                         <p className="text-gray-300 leading-relaxed text-sm sm:text-base">
-                            [Falcon description]
+                            I train out of Falcon Training Facility in Lake View East. The gym is well-maintained, semi-private, and contains a wide array of high-quality fitness equipment suited to all types of training.
                         </p>
                     </div>
                 </div>
 
                 <div className="bg-gray-900 p-4 sm:p-6 md:p-8 rounded-lg">
                     <h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">Packages & Rates</h3>
-                    <div className="space-y-3 sm:space-y-4 mb-6 sm:mb-8">
-                        <div className="flex justify-between items-center border-b border-gray-700 pb-3 sm:pb-4">
-                            <span className="text-base sm:text-lg md:text-xl">[Package 1 Name]</span>
-                            <span className="text-base sm:text-lg md:text-xl font-bold">[Price]</span>
+
+                    <div className="mb-6">
+                        <h4 className="text-lg font-semibold mb-3 text-gray-300">Rates</h4>
+                        <div className="space-y-2">
+                            {[{ freq: '1x / week', rate: '$90 / session' }, { freq: '2x / week', rate: '$80 / session' }, { freq: '3x / week', rate: '$70 / session' }].map(({ freq, rate }) => (
+                                <div key={freq} className="flex justify-between text-sm sm:text-base border-b border-gray-700 pb-2">
+                                    <span className="text-gray-400">{freq}</span>
+                                    <span className="font-semibold">{rate}</span>
+                                </div>
+                            ))}
                         </div>
-                        <div className="flex justify-between items-center border-b border-gray-700 pb-3 sm:pb-4">
-                            <span className="text-base sm:text-lg md:text-xl">[Package 2 Name]</span>
-                            <span className="text-base sm:text-lg md:text-xl font-bold">[Price]</span>
-                        </div>
-                        <div className="flex justify-between items-center border-b border-gray-700 pb-3 sm:pb-4">
-                            <span className="text-base sm:text-lg md:text-xl">[Package 3 Name]</span>
-                            <span className="text-base sm:text-lg md:text-xl font-bold">[Price]</span>
-                        </div>
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6 sm:mb-8">
+                        {[
+                            { label: '1-Month', prices: [{ freq: '1x / week', price: '$360' }, { freq: '2x / week', price: '$640' }, { freq: '3x / week', price: '$840' }] },
+                            { label: '2-Month', prices: [{ freq: '1x / week', price: '$700' }, { freq: '2x / week', price: '$1,240' }, { freq: '3x / week', price: '$1,620' }] },
+                            { label: '3-Month', prices: [{ freq: '1x / week', price: '$1,020' }, { freq: '2x / week', price: '$1,800' }, { freq: '3x / week', price: '$2,340' }] },
+                        ].map(({ label, prices }) => (
+                            <div key={label} className="bg-black rounded-lg p-4">
+                                <h4 className="text-lg font-bold mb-3 border-b border-gray-700 pb-2">{label}</h4>
+                                <div className="space-y-2">
+                                    {prices.map(({ freq, price }) => (
+                                        <div key={freq} className="flex justify-between text-sm sm:text-base">
+                                            <span className="text-gray-400">{freq}</span>
+                                            <span className="font-semibold">{price}</span>
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        ))}
                     </div>
 
                     <button

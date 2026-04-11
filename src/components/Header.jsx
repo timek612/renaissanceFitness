@@ -1,13 +1,16 @@
+
+import logo from '../assets/renaissance-final_combo - white.png';
+
 function Header({ onBookNowClick }) {
     return (
         <header className="bg-black text-white py-4 px-4 sm:px-6 flex items-center justify-between">
             <div className="flex items-center space-x-2 sm:space-x-4">
                 <img
-                    src="/logo.png"
-                    alt="Logo"
-                    className="h-8 w-8 sm:h-12 sm:w-12"
+                    src={logo}
+                    alt="Renaissance Fitness"
+                    className="h-8 sm:h-12"
                 />
-                <h1 className="text-lg sm:text-xl md:text-2xl font-bold">[Website Title]</h1>
+                {/* <h1 className="text-lg sm:text-xl md:text-2xl font-bold">[Website Title]</h1> */}
             </div>
             <button
                 onClick={onBookNowClick}
