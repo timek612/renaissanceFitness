@@ -24,9 +24,9 @@ exports.handler = async (event) => {
     const businessEmail = process.env.BUSINESS_EMAIL || 'aj.timek@gmail.com';
 
     const emailParams = {
-        Source: businessEmail,
+        Source: 'Renaissance Fitness <aj.timek@gmail.com>',
         Destination: {
-            ToAddresses: [businessEmail]
+            ToAddresses: [businessEmail, 'renaissancepfllc@gmail.com']
         },
         Message: {
             Subject: {
