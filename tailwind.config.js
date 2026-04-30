@@ -6,6 +6,13 @@ export default {
     ],
     theme: {
         extend: {
+            fontFamily: {
+                sans: ['PT Sans', 'sans-serif'],
+                inter: ['Inter', 'sans-serif'],
+                montserrat: ['Montserrat', 'sans-serif'],
+                oswald: ['Oswald', 'sans-serif'],
+                'pt-sans': ['PT Sans', 'sans-serif'],
+            },
             colors: {
                 primary: '#000000',
                 secondary: '#FFFFFF',

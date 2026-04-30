@@ -8,17 +8,17 @@ function Header({ onBookNowClick }) {
         <header className="bg-black text-white py-2 px-4 sm:px-6 flex items-center justify-between relative">
             {/* Mobile: combo logo only */}
             <div className="flex md:hidden items-center">
-                <img src={combo} alt="Renaissance Fitness" className="h-10 w-auto" />
+                <img src={combo} alt="Renaissance Fitness" className="h-20 w-auto" />
             </div>
 
             {/* Desktop: icon on the left */}
             <div className="hidden md:flex items-center">
-                <img src={logo} alt="Renaissance Fitness" className="h-16 w-auto" />
+                <img src={logo} alt="Renaissance Fitness" className="h-28 w-auto" />
             </div>
 
             {/* Desktop: wordmark centered absolutely */}
             <div className="hidden md:block absolute left-1/2 -translate-x-1/2">
-                <img src={wordmark} alt="Renaissance Fitness" className="h-16 w-auto" />
+                <img src={wordmark} alt="Renaissance Fitness" className="h-44 w-auto" />
             </div>
 
             <button
