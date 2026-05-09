@@ -1,4 +1,18 @@
+import { useState } from 'react';
+import img1 from '../assets/IMG_1706.jpeg';
+import img2 from '../assets/IMG_1707.jpeg';
+import img3 from '../assets/IMG_1720.jpeg';
+import img4 from '../assets/IMG_1723.jpeg';
+import img5 from '../assets/IMG_1725.jpeg';
+import img6 from '../assets/IMG_1726.jpeg';
+
+const images = [img1, img2, img3, img4, img5, img6];
+
 function PersonalTrainingSection({ onBookNowClick }) {
+    const [current, setCurrent] = useState(0);
+
+    const prev = () => setCurrent((c) => (c === 0 ? images.length - 1 : c - 1));
+    const next = () => setCurrent((c) => (c === images.length - 1 ? 0 : c + 1));
     return (
         <section className="bg-black text-white px-4 sm:px-6 py-8 sm:py-12 md:py-16">
             <div className="max-w-6xl mx-auto">
@@ -13,11 +27,42 @@ function PersonalTrainingSection({ onBookNowClick }) {
                         </p>
                     </div>
 
-                    {/* <div className="bg-gray-900 p-4 sm:p-6 rounded-lg">
-                        <h1>
-                            PHOTOS
-                        </h1>
-                    </div> */}
+                    <div className="bg-gray-900 p-4 sm:p-6 rounded-lg relative overflow-hidden">
+                        <div className="relative w-full h-64 sm:h-80">
+                            {images.map((src, i) => (
+                                <img
+                                    key={i}
+                                    src={src}
+                                    alt={`Training photo ${i + 1}`}
+                                    className={`absolute inset-0 w-full h-full object-cover rounded transition-opacity duration-500 ease-in-out ${i === current ? 'opacity-100' : 'opacity-0'}`}
+                                />
+                            ))}
+                        </div>
+                        <button
+                            onClick={prev}
+                            className="absolute left-6 top-1/2 -translate-y-1/2 bg-black bg-opacity-80 text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-opacity-80 leading-none text-center"
+                            aria-label="Previous image"
+                        >
+                            <span className="block -mt-px">‹</span>
+                        </button>
+                        <button
+                            onClick={next}
+                            className="absolute right-6 top-1/2 -translate-y-1/2 bg-black bg-opacity-80 text-white w-8 h-8 rounded-full flex items-center justify-center hover:bg-opacity-80 leading-none text-center"
+                            aria-label="Next image"
+                        >
+                            <span className="block -mt-px">›</span>
+                        </button>
+                        <div className="flex justify-center mt-3 space-x-2">
+                            {images.map((_, i) => (
+                                <button
+                                    key={i}
+                                    onClick={() => setCurrent(i)}
+                                    className={`w-2 h-2 rounded-full ${i === current ? 'bg-white' : 'bg-gray-600'}`}
+                                    aria-label={`Go to image ${i + 1}`}
+                                />
+                            ))}
+                        </div>
+                    </div>
                 </div>
 
                 <div className="bg-gray-900 p-4 sm:p-6 md:p-8 rounded-lg">

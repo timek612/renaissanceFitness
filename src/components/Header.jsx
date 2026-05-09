@@ -23,7 +23,7 @@ function Header({ onBookNowClick }) {
 
             <button
                 onClick={onBookNowClick}
-                className="bg-white text-black px-3 py-1.5 sm:px-6 sm:py-2 rounded text-sm sm:text-base font-medium hover:bg-gray-200 transition-colors"
+                className="bg-white text-black px-3 py-1.5 sm:px-6 sm:py-2 rounded text-sm sm:text-base font-bold hover:bg-gray-200 transition-colors"
             >
                 Book Now
             </button>
